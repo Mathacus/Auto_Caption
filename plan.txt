@@ -1,0 +1,12 @@
+    - Ingest a video of any kind
+    - Any background noise is removed from the video so that just the human voice audio can be captioned
+    - The speaking audio is ingested into a tool like whisper to generate captions
+    - Captions are then displayed to the user in a genius lyric style format
+    
+    --------------------------------------------------------------------------------------------------------
+    - Once the above has been established I then want to move on to timestamping captions so that they can be overlayed in the original video
+    - This will require me to build out a simple front end that allows a user to upload a video
+    - The above cleaning and captioning steps will be carried out 
+    - I need to figure out a way to timestamp the video and match captions
+    - The caption video then will be displayed to the user with the ability to download it.
+    
