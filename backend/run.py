@@ -1,13 +1,14 @@
-from extract_audio import mp4_to_mp3, isolate_vocals
-from transcribe_audio import transcribe
+from pipeline.extract_audio import mp4_to_mp3, isolate_vocals
+from pipeline.transcribe_audio import transcribe
+import asyncio
 
-input = "input.mp4"
-output = "output.mp3"
-vocal_output = "output_vocals.mp3"
-
-def run():
+def run(input, output, vocal_output):
     mp4_to_mp3(input, output)
-    isolate_vocals()
+    isolate_vocals(output)
     transcribe(vocal_output)
 
-run()
+input_file = "./files/input.mp4"
+output_file = "./files/output.mp3"
+vocal_output_file = "./files/output_vocals.mp3"
+
+run(input_file, output_file, vocal_output_file)
